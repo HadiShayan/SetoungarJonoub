@@ -1,235 +1,207 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ستونگر جنوب</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ستونگر جنوب</title>
 
-<!-- فونت Vazir -->
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+  <!-- فونت وزیر -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn/Vazirmatn-font-face.css" rel="stylesheet" />
 
-<style>
-body {
-  font-family: Vazir, Tahoma, sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-  direction: rtl;
-}
-header {
-  background-color: #7D7D7D;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-}
-header img {
-  max-height: 60px;
-  vertical-align: middle;
-}
-header h1 {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-}
-header p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #FFD300;
-}
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #7D7D7D;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: white;
+    }
+    header h1 {
+      color: white;
+      margin: 0 15px 0 0;
+    }
 
-/* اسلایدشو */
-.slideshow-container {
-  position: relative;
-  max-width: 900px;
-  margin: 30px auto;
-}
-.mySlides {display: none; position: relative;}
-.mySlides img {width: 100%; border-radius: 8px;}
-.caption {
-  color: #fff;
-  font-size: 16px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.5);
-  text-align: center;
-}
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  padding: 16px;
-  margin-top: -22px;
-  color: #FFD300;
-  font-weight: bold;
-  font-size: 28px;
-  user-select: none;
-  background: rgba(0,0,0,0.6);
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-.next {right: 0;}
-.prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);}
-.dot {
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-.active, .dot:hover {background-color: #FFD300;}
-.fade {animation-name: fade; animation-duration: 1s;}
-@keyframes fade {from {opacity: .4} to {opacity: 1}}
+    /* اسلایدشو */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFD300;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      user-select: none;
+      background: rgba(0,0,0,0.4);
+      border-radius: 3px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .prev:hover, .next:hover {
+      background: rgba(0,0,0,0.8);
+    }
 
-/* بخش خدمات */
-#services {
-  background-color: #fff;
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-  border-radius: 8px;
-}
-#services h2 {
-  text-align: center;
-  color: #FFD300;
-}
-#services ul {
-  list-style: none;
-  padding: 0;
-}
-#services li {
-  background: #f4f4f4;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
+    /* بخش خدمات */
+    section {
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .service-item {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      min-width: 150px;
+      text-align: center;
+    }
 
-/* بخش تماس */
-#contact {
-  background-color: #7D7D7D;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-#contact a {
-  color: #FFD300;
-  text-decoration: none;
-  display: inline-block;
-  margin: 5px 10px;
-}
-</style>
+    /* تماس با ما */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    footer a {
+      color: #FFD300;
+      text-decoration: none;
+    }
+  </style>
+
 </head>
 <body>
 
-<header>
-  <img src="images/logo.png" alt="لوگو ستونگر جنوب">
-  <h1>ستونگر جنوب</h1>
-  <p>از وال‌پست تا پایان سفت‌کاری</p>
-</header>
+  <header>
+    <img src="images/logo_circle.png" alt="لوگوی ستونگر جنوب" />
+    <h1>ستونگر جنوب</h1>
+  </header>
 
-<!-- اسلایدشو -->
-<section id="projects">
+  <!-- اسلایدشو -->
   <div class="slideshow-container">
-
     <div class="mySlides fade">
-      <img src="images/project1.jpg" alt="پروژه 1">
-      <div class="caption">اجرای وادار و وال‌پست – پروژه سه راه برق</div>
+      <a href="project1.html">
+        <img src="images/project1.jpg" alt="اجرای وادار و وال‌پست – پروژه سه راه برق">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/project2.jpg" alt="پروژه 2">
-      <div class="caption">اجرای وال‌پست و دیوارچینی – محل اجرا: رسالت، کوچه خبیر</div>
+      <a href="project2.html">
+        <img src="images/project2.jpg" alt="پروژه ۲">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/project3.jpg" alt="پروژه 3">
-      <div class="caption">اجرای وال‌پست و دیوارچینی – محل اجرا: کوی ولیعصر</div>
+      <a href="project3.html">
+        <img src="images/project3.jpg" alt="پروژه ۳">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/project4.jpg" alt="پروژه 4">
-      <div class="caption">اجرای وال‌پست – محل اجرا: ۱۳ هکتاری</div>
+      <a href="project4.html">
+        <img src="images/project4.jpg" alt="پروژه ۴">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/project5.jpg" alt="پروژه 5">
-      <div class="caption">اجرای شاسی‌کشی نما – محل اجرا: نیایش، نبش نیایش ۱۰</div>
+      <a href="project5.html">
+        <img src="images/project5.jpg" alt="پروژه ۵">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/project6.jpg" alt="پروژه 6">
-      <div class="caption">اسکلت فلزی مسکونی – محل اجرا: شهر میناب</div>
+      <a href="project6.html">
+        <img src="images/project6.jpg" alt="پروژه ۶">
+        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+      </a>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <div style="text-align:center; margin-top:8px;">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-  </div>
-</section>
+  <!-- بخش خدمات -->
+  <section>
+    <h2>خدمات ما</h2>
+    <div class="services">
+      <div class="service-item">اجرای اسکلت بتنی</div>
+      <div class="service-item">دیوارچینی</div>
+      <div class="service-item">سقف‌سازی</div>
+    </div>
+  </section>
 
-<!-- خدمات -->
-<section id="services">
-  <h2>خدمات ما</h2>
-  <ul>
-    <li>اجرای وال‌پست</li>
-    <li>آرماتوربندی</li>
-    <li>دیوارچینی</li>
-    <li>شاسی‌کشی نما</li>
-    <li>ساخت اسکلت فلزی و بتنی</li>
-  </ul>
-</section>
+  <!-- تماس با ما -->
+  <footer>
+    <p>برای ارتباط با ما:</p>
+    <p>📞 <a href="https://wa.me/989173580068">واتساپ: 09173580068</a></p>
+  </footer>
 
-<!-- تماس -->
-<section id="contact">
-  <h2>راه‌های ارتباطی</h2>
-  <p>📞 <a href="tel:09173580068">09173580068</a></p>
-  <p>💬 <a href="https://wa.me/989173580068">واتساپ</a></p>
-  <p>📷 <a href="https://www.instagram.com/setoungar_jonoub" target="_blank">اینستاگرام</a></p>
-</section>
+  <script>
+    let slideIndex = 0;
+    showSlides();
 
-<script>
-let slideIndex = 0;
-showSlides();
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
 
-function plusSlides(n) {
-  slideIndex += n - 1;
-  showSlides();
-}
-
-function currentSlide(n) {
-  slideIndex = n - 1;
-  showSlides();
-}
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (slideIndex >= slides.length) {slideIndex = 0}
-  if (slideIndex < 0) {slideIndex = slides.length - 1}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex].style.display = "block";
-  dots[slideIndex].className += " active";
-  slideIndex++;
-  setTimeout(showSlides, 7000); // تغییر زمان به 7 ثانیه
-}
-</script>
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 7000); // ۷ ثانیه
+    }
+  </script>
 
 </body>
 </html>

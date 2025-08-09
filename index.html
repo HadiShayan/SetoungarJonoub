@@ -1,241 +1,120 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setoongar Jonoob</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Vazir', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8f8f8;
-            color: #333;
-        }
-        header {
-            background: #222;
-            padding: 10px;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-        header img {
-            height: 60px;
-            margin-left: 15px;
-        }
-        header h1 {
-            font-size: 1.4rem;
-        }
-        section {
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ستون‌گر جنوب</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #145c4c;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    .slideshow {
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    /* بخش خدمات */
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px auto;
+        max-width: 1100px;
+        gap: 20px;
+    }
+    .column {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .metalwork {
+        background-color: #f2f2f2;
+    }
+    .concrete {
+        background-color: #e6f9f0;
+    }
+    .column h2 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .column h2::before {
+        content: "➔ ";
+        color: orange;
+    }
+    .column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .column ul li {
+        margin: 8px 0;
+        padding-right: 10px;
+    }
+    @media (max-width: 768px) {
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
+            flex-direction: column;
         }
-        .service-item {
-            background: #f0f0f0;
-            padding: 8px;
-            border-radius: 5px;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .mySlides {
-            display: none;
-        }
-        .mySlides img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 15px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 0 3px 3px 0;
-            background: rgba(0,0,0,0.5);
-            user-select: none;
-            transform: translateY(-50%);
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #25D366;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
 <header>
-    <img src="logo_circle.png" alt="لوگو">
-    <h1>ستون‌گر جنوب</h1>
+    <nav>
+        <a href="#">خانه</a>
+        <a href="#">درباره ما</a>
+        <a href="#">پروژه‌ها</a>
+        <a href="#">تماس با ما</a>
+    </nav>
 </header>
 
-<section>
-    <h2>گالری پروژه‌ها</h2>
-    <div class="slideshow-container">
-        <div class="mySlides">
-            <a href="project1.html"><img src="optimized_images/project1.jpg" alt="پروژه 1"></a>
-        </div>
-        <div class="mySlides">
-            <a href="optimized_images/project2.jpg"><img src="optimized_images/project2.jpg" alt="پروژه 2"></a>
-        </div>
-        <div class="mySlides">
-            <a href="optimized_images/project3.jpg"><img src="optimized_images/project3.jpg" alt="پروژه 3"></a>
-        </div>
-        <div class="mySlides">
-            <a href="optimized_images/project4.jpg"><img src="optimized_images/project4.jpg" alt="پروژه 4"></a>
-        </div>
-        <div class="mySlides">
-            <a href="optimized_images/project5.jpg"><img src="optimized_images/project5.jpg" alt="پروژه 5"></a>
-        </div>
-        <div class="mySlides">
-            <a href="optimized_images/project6.jpg"><img src="optimized_images/project6.jpg" alt="پروژه 6"></a>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+<!-- اسلایدشو -->
+<div class="slideshow">
+    <img src="optimized_images/project1.jpg" alt="Slide 1" style="width:100%">
+</div>
+
+<!-- بخش خدمات -->
+<section class="services">
+    <div class="column metalwork">
+        <h2>فلزکاری ساختمانی</h2>
+        <ul>
+            <li>اجرای اسکلت فلزی</li>
+            <li>ساخت و نصب در و پنجره فلزی</li>
+            <li>نرده و حفاظ</li>
+            <li>سایبان و آلاچیق</li>
+            <li>سوله و سازه‌های فلزی</li>
+        </ul>
+    </div>
+    <div class="column concrete">
+        <h2>سفت‌کاری ساختمان</h2>
+        <ul>
+            <li>اجرای فونداسیون</li>
+            <li>دیوارچینی</li>
+            <li>سقف‌زنی</li>
+            <li>سفت‌کاری کامل ساختمان</li>
+            <li>ساخت دیوار محوطه</li>
+        </ul>
     </div>
 </section>
-
-<section>
-  <h2>خدمات ما</h2>
-  
-  <div class="services">
-    <div class="service-item"><strong>فلزکاری ساختمانی</strong></div>
-    <div class="service-item">ساخت و اجرای وال‌پست</div>
-    <div class="service-item">شاسی‌کشی و آهن‌کشی نما</div>
-    <div class="service-item">شاسی‌کشی چاله آسانسور</div>
-    <div class="service-item">اجرای حفاظ کارگاهی</div>
-    <div class="service-item">ساخت آلاچیق و سایبان</div>
-    <div class="service-item">اجرای پله و نردبان فلزی</div>
-    <div class="service-item">ساخت سازه فلزی</div>
-    <div class="service-item">اجرای سوله</div>
-    <div class="service-item">سایر خدمات جوشکاری</div>
-
-    <div class="service-item"><strong>اجرای سفت کاری</strong></div>
-    <div class="service-item">دیوارچینی (بلوک و آجر)</div>
-    <div class="service-item">پلاستر (نما و دیوار داخلی)</div>
-    <div class="service-item">نرمه‌کشی (نما، آسانسور و…)</div>
-    <div class="service-item">شیب‌بندی</div>
-    <div class="service-item">کف‌سازی</div>
-    <div class="service-item">اجرای وال‌مش</div>
-    <div class="service-item">سایر خدمات بنایی</div>
-  </div>
-</section>
-
-<footer>
-    <p>برای اطلاعات بیشتر تماس بگیرید: 
-        <a href="tel:09173580068">09173580068</a> | 
-        <a href="https://wa.me/989173580068" target="_blank">واتساپ</a>
-    </p>
-
-<section class="services-section">
-    <div class="services-columns">
-        <div class="service-column metal">
-            <h3>فلزکاری ساختمانی <span class="arrow">➔</span></h3>
-            <ul>
-                <li>ساخت و اجرای وال‌پست</li>
-                <li>شاسی‌کشی و آهن‌کشی نما</li>
-                <li>شاسی‌کشی چاله آسانسور</li>
-                <li>اجرای حفاظ کارگاهی</li>
-                <li>ساخت آلاچیق و سایبان</li>
-                <li>اجرای پله و نردبان فلزی</li>
-            </ul>
-        </div>
-        <div class="service-column civil">
-            <h3>سفت‌کاری ساختمان <span class="arrow">➔</span></h3>
-            <ul>
-                <li>اجرای دیوارچینی</li>
-                <li>اجرای فونداسیون و اسکلت</li>
-                <li>دیوار و تیغه‌چینی</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<style>
-.services-columns {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-.service-column {
-    flex: 1;
-    padding: 15px;
-    border-radius: 8px;
-    min-width: 280px;
-}
-.service-column.metal {
-    background-color: #f2f2f2;
-}
-.service-column.civil {
-    background-color: #e6f9f0;
-}
-.arrow {
-    color: orange;
-    margin-right: 5px;
-}
-.service-column h3 {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.service-column ul {
-    list-style: none;
-    padding: 0;
-}
-.service-column ul li::before {
-    content: "• ";
-    color: #555;
-}
-</style>
-
-</footer>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); 
-}
-
-function plusSlides(n) {
-    slideIndex += n - 1;
-    showSlides();
-}
-</script>
 
 </body>
 </html>

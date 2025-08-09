@@ -98,7 +98,7 @@
     <h2>گالری پروژه‌ها</h2>
     <div class="slideshow-container">
         <div class="mySlides">
-            <a href="project1.html"><img src="project1.jpg" alt="پروژه 1"></a>
+            <a href="project1.html"><img src="optimized_images/project1.jpg" alt="پروژه 1"></a>
         </div>
         <div class="mySlides">
             <a href="optimized_images/project2.jpg"><img src="optimized_images/project2.jpg" alt="پروژه 2"></a>
@@ -151,6 +151,69 @@
         <a href="tel:09173580068">09173580068</a> | 
         <a href="https://wa.me/989173580068" target="_blank">واتساپ</a>
     </p>
+
+<section class="services-section">
+    <div class="services-columns">
+        <div class="service-column metal">
+            <h3>فلزکاری ساختمانی <span class="arrow">➔</span></h3>
+            <ul>
+                <li>ساخت و اجرای وال‌پست</li>
+                <li>شاسی‌کشی و آهن‌کشی نما</li>
+                <li>شاسی‌کشی چاله آسانسور</li>
+                <li>اجرای حفاظ کارگاهی</li>
+                <li>ساخت آلاچیق و سایبان</li>
+                <li>اجرای پله و نردبان فلزی</li>
+            </ul>
+        </div>
+        <div class="service-column civil">
+            <h3>سفت‌کاری ساختمان <span class="arrow">➔</span></h3>
+            <ul>
+                <li>اجرای دیوارچینی</li>
+                <li>اجرای فونداسیون و اسکلت</li>
+                <li>دیوار و تیغه‌چینی</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<style>
+.services-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.service-column {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 280px;
+}
+.service-column.metal {
+    background-color: #f2f2f2;
+}
+.service-column.civil {
+    background-color: #e6f9f0;
+}
+.arrow {
+    color: orange;
+    margin-right: 5px;
+}
+.service-column h3 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.service-column ul {
+    list-style: none;
+    padding: 0;
+}
+.service-column ul li::before {
+    content: "• ";
+    color: #555;
+}
+</style>
+
 </footer>
 
 <script>

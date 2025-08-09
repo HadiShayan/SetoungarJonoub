@@ -68,13 +68,12 @@
       background: rgba(0,0,0,0.4);
       border-radius: 3px;
     }
-    .prev { left: 10px; }
-    .next { right: 10px; }
+    .prev { right: 10px; } /* تغییر جهت */
+    .next { left: 10px; }  /* تغییر جهت */
     .prev:hover, .next:hover {
       background: rgba(0,0,0,0.8);
     }
 
-    /* بخش خدمات */
     section {
       padding: 20px;
     }
@@ -96,7 +95,6 @@
       text-align: center;
     }
 
-    /* تماس با ما */
     footer {
       background-color: #333;
       color: white;
@@ -117,55 +115,54 @@
     <h1>ستونگر جنوب</h1>
   </header>
 
-  <!-- اسلایدشو -->
   <div class="slideshow-container">
     <div class="mySlides fade">
       <a href="project1.html">
         <img src="images/project1.jpg" alt="اجرای وادار و وال‌پست – پروژه سه راه برق">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
     <div class="mySlides fade">
       <a href="project2.html">
         <img src="images/project2.jpg" alt="پروژه ۲">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
     <div class="mySlides fade">
       <a href="project3.html">
         <img src="images/project3.jpg" alt="پروژه ۳">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
     <div class="mySlides fade">
       <a href="project4.html">
         <img src="images/project4.jpg" alt="پروژه ۴">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
     <div class="mySlides fade">
       <a href="project5.html">
         <img src="images/project5.jpg" alt="پروژه ۵">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
     <div class="mySlides fade">
       <a href="project6.html">
         <img src="images/project6.jpg" alt="پروژه ۶">
-        <div class="overlay-text">برای دیدن بیشتر کلیک کنید</div>
+        <div class="overlay-text">مشاهده پروژه</div>
       </a>
     </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- فلش‌ها -->
+    <a class="prev" onclick="plusSlides(1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(-1)">&#10095;</a>
   </div>
 
-  <!-- بخش خدمات -->
   <section>
     <h2>خدمات ما</h2>
     <div class="services">
@@ -175,7 +172,6 @@
     </div>
   </section>
 
-  <!-- تماس با ما -->
   <footer>
     <p>برای ارتباط با ما:</p>
     <p>📞 <a href="https://wa.me/989173580068">واتساپ: 09173580068</a></p>
@@ -191,15 +187,14 @@
     }
 
     function showSlides() {
-      let i;
       let slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
+      for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 7000); // ۷ ثانیه
+      setTimeout(showSlides, 7000);
     }
   </script>
 

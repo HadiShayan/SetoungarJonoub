@@ -4,40 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ستون‌گر جنوب</title>
-<link rel="stylesheet" href="styles.css">
 <style>
     body {
         font-family: Tahoma, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #fff;
     }
     header {
-        background-color: #145c4c;
+        background-color: #145c4c; /* سبز تیره */
         color: white;
-        padding: 10px 0;
-        text-align: center;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header img {
+        height: 50px;
     }
     nav a {
         color: white;
         text-decoration: none;
-        margin: 0 15px;
+        margin: 0 10px;
         font-weight: bold;
+        font-size: 15px;
     }
-    nav a:hover {
-        text-decoration: underline;
-    }
-    .slideshow {
-        max-width: 100%;
+    nav a:hover { text-decoration: underline; }
+    /* اسلایدشو */
+    .slideshow img {
+        width: 100%;
         height: auto;
-        text-align: center;
+        display: block;
     }
     /* بخش خدمات */
     .services {
         display: flex;
         flex-wrap: wrap;
-        margin: 50px auto;
+        margin: 40px auto;
         max-width: 1100px;
         gap: 20px;
+        padding: 0 15px;
     }
     .column {
         flex: 1;
@@ -46,13 +52,13 @@
         border-radius: 8px;
     }
     .metalwork {
-        background-color: #f2f2f2;
+        background-color: #f2f2f2; /* خاکستری روشن */
     }
     .concrete {
-        background-color: #e6f9f0;
+        background-color: #d6f5e9; /* سبز ملایم دقیق‌تر */
     }
     .column h2 {
-        font-size: 1.4em;
+        font-size: 1.3em;
         margin-bottom: 15px;
         color: #333;
     }
@@ -67,18 +73,17 @@
     }
     .column ul li {
         margin: 8px 0;
-        padding-right: 10px;
+        padding-right: 5px;
     }
     @media (max-width: 768px) {
-        .services {
-            flex-direction: column;
-        }
+        .services { flex-direction: column; }
     }
 </style>
 </head>
 <body>
 
 <header>
+    <img src="logo_circle.png" alt="لوگو">
     <nav>
         <a href="#">خانه</a>
         <a href="#">درباره ما</a>
@@ -89,7 +94,7 @@
 
 <!-- اسلایدشو -->
 <div class="slideshow">
-    <img src="optimized_images/project1.jpg" alt="Slide 1" style="width:100%">
+    <img src="optimized_images/project1.jpg" alt="پروژه نمونه">
 </div>
 
 <!-- بخش خدمات -->

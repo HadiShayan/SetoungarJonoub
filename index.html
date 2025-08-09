@@ -1,109 +1,96 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ستونگر جنوب - نمونه کارها</title>
-  <style>
-    body {
-      font-family: tahoma, sans-serif;
-      margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background-color: #4d4d4d;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-    nav {
-      text-align: center;
-      background-color: #ffcc00;
-      padding: 10px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #4d4d4d;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-    .cta {
-      display: inline-block;
-      background-color: #ffcc00;
-      color: black;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ستونگر جنوب</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #FFD300;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            max-height: 80px;
+        }
+        header h1 {
+            margin: 10px 0 5px;
+        }
+        header p {
+            margin: 0;
+            font-weight: bold;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .services, .contact {
+            padding: 20px;
+            background: #7D7D7D;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .services h2, .contact h2 {
+            color: #FFD300;
+        }
+        .contact a {
+            color: #FFD300;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <header>
+
+<header>
+    <img src="images/logo.png" alt="لوگوی ستونگر جنوب">
     <h1>ستونگر جنوب</h1>
-    <p>از وال‌پست تا پایان سفت‌کاری | دقت میلی‌متری - تحویل بی‌دردسر</p>
-  </header>
+    <p>از وال‌پست تا پایان سفت‌کاری</p>
+</header>
 
-  <nav>
-    <a href="#gallery">نمونه کارها</a>
-    <a href="#services">خدمات</a>
-    <a href="#contact">تماس</a>
-  </nav>
-
-  <section id="gallery">
-    <h2>نمونه کارها</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/600x400?text=Project+1" alt="نمونه کار 1">
-      <img src="https://via.placeholder.com/600x400?text=Project+2" alt="نمونه کار 2">
-      <img src="https://via.placeholder.com/600x400?text=Project+3" alt="نمونه کار 3">
+<section class="gallery">
+    <div class="gallery-item">
+        <img src="images/project1.jpg" alt="پروژه ۱">
+        <p>اجرای پروژه سفت‌کاری با استفاده از بتن‌ریزی استاندارد</p>
     </div>
-  </section>
+</section>
 
-  <section id="services">
+<section class="services">
     <h2>خدمات ما</h2>
     <ul>
-      <li>اجرای وال‌پست استاندارد</li>
-      <li>دیوارچینی دقیق</li>
-      <li>سفت‌کاری کامل پروژه</li>
+        <li>آرماتوربندی حرفه‌ای</li>
+        <li>دیوارچینی و تیغه‌چینی دقیق</li>
+        <li>بتن‌ریزی مطابق با استانداردهای ایمنی</li>
+        <li>اجرای وال‌پست و سازه‌های مقاوم</li>
     </ul>
-  </section>
+</section>
 
-  <section id="contact">
+<section class="contact">
     <h2>تماس با ما</h2>
-    <p>📞 شماره: 0912XXXXXXX</p>
-    <p>📱 واتساپ: <a href="https://wa.me/98912XXXXXXX" target="_blank">ارسال پیام</a></p>
-    <p>📷 اینستاگرام: <a href="https://instagram.com/setoungarjonoub" target="_blank">@setoungarjonoub</a></p>
-    <a class="cta" href="tel:0912XXXXXXX">تماس مستقیم</a>
-  </section>
+    <p>📞 0912xxxxxxx</p>
+    <p>💬 <a href="https://wa.me/98912xxxxxxx" target="_blank">چت در واتساپ</a></p>
+    <p>📷 <a href="https://instagram.com/setoungar_jonoub" target="_blank">صفحه اینستاگرام</a></p>
+</section>
 
-  <footer>
-    <p>© 2025 ستونگر جنوب - تمامی حقوق محفوظ است.</p>
-  </footer>
 </body>
 </html>
